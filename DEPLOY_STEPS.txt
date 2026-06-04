@@ -1,0 +1,29 @@
+JASLI's Casino server deploy files
+==================================
+
+Upload these files to your GitHub repo:
+- blackjack_ws_server_deploy_ready.py
+- requirements.txt
+- Procfile
+
+Render setup:
+1. Go to https://render.com
+2. New + > Web Service
+3. Connect the GitHub repo containing the three files above
+4. Runtime: Python 3
+5. Build Command:
+   pip install -r requirements.txt
+6. Start Command:
+   python blackjack_ws_server_deploy_ready.py
+7. Deploy
+8. Copy the Render service URL, for example:
+   https://jaslis-blackjack.onrender.com
+9. In your game app, set:
+   DEFAULT_ONLINE_SERVER_URL = "wss://jaslis-blackjack.onrender.com"
+10. Rebuild the exe:
+   pyinstaller --onefile --windowed blackjack_online_hardcoded_server.py
+
+Important:
+- Render gives an HTTPS URL. The game needs the WSS version.
+- https://example.onrender.com becomes wss://example.onrender.com
+- If the app says ONLINE SERVER NOT CONFIGURED, your DEFAULT_ONLINE_SERVER_URL is still the placeholder.
