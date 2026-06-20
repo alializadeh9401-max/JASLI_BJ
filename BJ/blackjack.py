@@ -54,7 +54,7 @@ menu_status_message = ""
 # Local developer test only:
 #   DEFAULT_ONLINE_SERVER_URL = "ws://127.0.0.1:8765"
 # ------------------------------------------------------------------
-DEFAULT_ONLINE_SERVER_URL = "wss://YOUR-DEPLOYED-SERVER-HERE"
+DEFAULT_ONLINE_SERVER_URL = "wss://jasli-blackjack-server.onrender.com"
 online_ws_client = None
 online_ws_active = False
 online_room_code = ""
