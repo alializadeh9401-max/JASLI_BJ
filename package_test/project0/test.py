@@ -1,5 +1,5 @@
 import traceback
-import torch.nn as nn
+import torch.nn as nn # type: ignore
 
 
 def green(s):
@@ -25,7 +25,7 @@ def log_exit(*m):
 
 def check_numpy():
     try:
-        import numpy
+        import numpy # type: ignore
         log(green("PASS"), "NumPy installed")
     except ModuleNotFoundError:
         log(red("FAIL"), "NumPy not installed")
@@ -33,7 +33,7 @@ def check_numpy():
 
 def check_scipy():
     try:
-        import scipy
+        import scipy # type: ignore
         log(green("PASS"), "SciPy installed")
     except ModuleNotFoundError:
         log(red("FAIL"), "SciPy not installed")
@@ -41,7 +41,7 @@ def check_scipy():
 
 def check_matplotlib():
     try:
-        import matplotlib
+        import matplotlib # type: ignore
         log(green("PASS"), "matplotlib installed")
     except ModuleNotFoundError:
         log(red("FAIL"), "matplotlib not installed")
@@ -49,7 +49,7 @@ def check_matplotlib():
 
 def check_torch():
     try:
-        import torch
+        import torch # type: ignore
         log(green("PASS"), "PyTorch installed")
     except ModuleNotFoundError:
         log(red("FAIL"), "PyTorch not installed")
@@ -57,7 +57,7 @@ def check_torch():
 
 def check_tqdm():
     try:
-        import tqdm
+        import tqdm # type: ignore
         log(green("PASS"), "tqdm installed")
     except ModuleNotFoundError:
         log(red("FAIL"), "tqdm not installed")
